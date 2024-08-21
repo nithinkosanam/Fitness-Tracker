@@ -18,8 +18,7 @@ const exerciseSchema = new Schema({
         type: Date,
         required: true,
     },
-    timestamps: true
-})
+}, {timestamps: true})
 
 const exercise = mongoose.model('Exercise', exerciseSchema)
 

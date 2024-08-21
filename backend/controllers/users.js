@@ -12,7 +12,7 @@ const getAllUsers = async(req, res) => {
 const addUser = async(req, res) => {
     try {
         const username = req.body.username
-        const newUser = await Users.create(username)
+        const newUser = await Users.create({username})
         res.json({newUser})
     } catch (error) {
         res.status(400).json(`Error: ${error}`)
